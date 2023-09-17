@@ -119,6 +119,13 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+client_secret_183940493801-ass0b35mvbn7kcv5961ctelq4gcikior.apps.googleusercontent.com.json
+oldBack/.env
+oldBack/client_secret_183940493801-ass0b35mvbn7kcv5961ctelq4gcikior.apps.googleusercontent.com.json
+back/.env
+back/client_secret_183940493801-ass0b35mvbn7kcv5961ctelq4gcikior.apps.googleusercontent.com.json
+back/key.pem
+back/cert.pem
 
 # Spyder project settings
 .spyderproject
