@@ -1,7 +1,10 @@
 # app/utils/redis_operations.py
 import os
+from flask import Blueprint
 import redis
 from app.config import settings
+
+redis_operations = Blueprint('redis_operations', __name__)
 
 def init_redis():
     """Initialize Redis client."""

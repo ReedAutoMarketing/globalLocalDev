@@ -5,9 +5,11 @@ from flask_session import Session
 from werkzeug.middleware.proxy_fix import ProxyFix
 from app.config import settings
 from app.utils import redis_operations, google_api, openai_operations, db_operations
+from redis_operations import init_redis
 from .utils import openai_operations
 from app.utils import openai_operations
 from openai_operations import initialize_openai, add_summarize_reviews_route
+from app.utils import redis_operations
 import logging  # For the logger
 
 def create_app():
@@ -32,6 +34,7 @@ def create_app():
     redis_client = redis_operations.init_redis()  # Initialize Redis client
     app.config["SESSION_REDIS"] = redis_client
     Session(app)
+    redis_client = init_redis()
 
     # Initialize APIs
     google_api.load_google_api_config()
